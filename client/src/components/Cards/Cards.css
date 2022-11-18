@@ -1,0 +1,14 @@
+.Cards-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.div-carga{
+    font-size: 25px;
+    color: white;
+    height: 600px;
+    padding-top: 45px;
+    margin: auto;
+}

@@ -11,7 +11,7 @@ export default function Cards ({currentPokemons}){
             return (
                 <PokemonCard name={el.name} image={el.image} types={el.types} id={el.id} key={el.id}></PokemonCard>
             )  
-        }) : <p>Cargando Pokemons...</p> 
+        }) : <p className="div-carga">Cargando Pokemons...</p> 
              
     } 
 
