@@ -16,10 +16,9 @@ export function getPokemonByName(name){
     return async function(dispatch){
         try{
             const pokemonName = await axios.get(`http://localhost:3001/pokemons?name=${name}`)
-
             return dispatch({type: "GET_POKEMON_BY_NAME", payload: pokemonName.data})
         }catch(error){
-            console.log(error.message)
+            alert("El Pokemón no existe")
         }
     }
 }
@@ -89,9 +88,13 @@ export function filterByCreated(value){
 }
 
 export function deletePokemon(id){
-    return{
-        type: "DELETE_POKEMON",
-        payload: id
+    return async function(dispatch){
+        try{
+            await axios.get(`http://localhost:3001/delete/${id}`)
+            return dispatch({type: "DELETE_POKEMON", payload: id})
+        }catch(error){
+            console.log(error.message)
+        }
     }
 }
 

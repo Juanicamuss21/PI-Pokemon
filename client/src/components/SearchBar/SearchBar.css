@@ -1,0 +1,17 @@
+.c-div{
+    display: flex;
+    justify-content: center;  
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.s-bt{
+    width: 120px;
+    border-radius: 15px;
+    padding: 3px;
+    border-color: wheat;
+    color: white;
+    background-color: #191919;
+    cursor: pointer;
+}

@@ -1,4 +1,13 @@
+.cc-div{
+    margin: auto;
+    /* outline: 3px solid red; */
+}
+
 .cc-img{
     width: 200px;
     height: 200px;
+}
+
+.cc-color{
+    color: black;
 }

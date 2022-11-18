@@ -7,7 +7,7 @@ export default function Cards ({currentPokemons}){
     return (
         <div className="Cards-div">
     {
-        currentPokemons? currentPokemons.map(el => {
+        currentPokemons.length? currentPokemons.map(el => {
             return (
                 <PokemonCard name={el.name} image={el.image} types={el.types} id={el.id} key={el.id}></PokemonCard>
             )  

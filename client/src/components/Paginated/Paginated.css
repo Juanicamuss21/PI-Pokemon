@@ -1,0 +1,14 @@
+.bt-paginated{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    cursor: pointer;
+    background-color: black;
+    color: wheat;
+    border-radius: 7px;
+    outline: 2px solid wheat;
+    margin: 5px;
+}

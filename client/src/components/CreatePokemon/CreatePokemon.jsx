@@ -144,10 +144,10 @@ export default function CreatePokemon(){
     }
 
     return(
-        <div>
-            <h1>Crea aqui tu pokemon</h1>
+        <div className="input-type">
+            <h1>Crea aquí tu Pokemón!</h1>
             <form>
-                <div>
+                <div className="input-type__input">
                     <label>Name: </label>
                     <input
                     type="text"
@@ -157,7 +157,7 @@ export default function CreatePokemon(){
                     />
                     {error.name && (<p className="errors">{error.name}</p>)}        
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Life: </label>
                     <input
                     type="number"
@@ -167,7 +167,7 @@ export default function CreatePokemon(){
                     />
                     {error.life && (<p className="errors">{error.life}</p>)}
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Attack: </label>
                     <input
                     type="number"
@@ -177,7 +177,7 @@ export default function CreatePokemon(){
                     />   
                     {error.attack && (<p className="errors">{error.attack}</p>)}              
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Defense: </label>
                     <input
                     type="number"
@@ -187,7 +187,7 @@ export default function CreatePokemon(){
                     />  
                     {error.defense && (<p className="errors">{error.defense}</p>)}                    
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Speed:</label>
                     <input
                     type="number"
@@ -197,7 +197,7 @@ export default function CreatePokemon(){
                     />
                     {error.speed && (<p className="errors">{error.speed}</p>)}                   
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Height:</label>
                     <input
                     type="number"
@@ -207,7 +207,7 @@ export default function CreatePokemon(){
                     />   
                     {error.height && (<p className="errors">{error.height}</p>)}                  
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Weight:</label>
                     <input
                     type="number"
@@ -217,7 +217,7 @@ export default function CreatePokemon(){
                     />    
                     {error.weight && (<p className="errors">{error.weight}</p>)}               
                 </div>
-                <div>
+                <div className="input-type__input">
                     <label>Image:</label>
                     <input
                     type="text"
@@ -226,7 +226,7 @@ export default function CreatePokemon(){
                     onChange={(e) => handleChange(e)}
                     />                   
                 </div>
-                <div>
+                <div className="input-type__input">
                 <label>Type of pokemon: </label>
                 <select onChange={(e) => handleSelect(e)}> 
                                 
@@ -250,7 +250,7 @@ export default function CreatePokemon(){
                         
                 }
 
-                <button type="submit" onClick={(e) => handleSubmit(e)}>Crear Pokemon</button>
+                <button type="submit" className="bt-create" onClick={(e) => handleSubmit(e)}>Crear Pokemon</button>
                 
             </form>
         </div>

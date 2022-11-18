@@ -2,7 +2,6 @@ import React from "react";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux"
 import * as actions from "../../redux/actions"
-import {NavLink} from "react-router-dom"
 import "./Details.css"
 
 export default function Details(props){
@@ -23,11 +22,6 @@ console.log(props)
     return(
 
         <div className="cd-div">
-            <NavLink to="/home">
-            <button>
-            volver
-            </button>
-            </NavLink>
             
         {
 

@@ -66,13 +66,13 @@ export default function Home(){
 
             <Cards currentPokemons={currentPokemons}/>
             </div>
-
-           <Paginated
+         
+            <Paginated
             pokemonPerPage = {pokemonPerPage}
             allPokemons = {allPokemons.length}
             paginated = {paginated}
-            ></Paginated> 
-           
+            ></Paginated>
+                     
         </div>
     )
 }

@@ -12,7 +12,7 @@ router.get('/pokemons', async (req, res) => {
             const pokemonName = await dataPokemon.filter(el => el.name.toLowerCase().includes(name.toLowerCase()))
             pokemonName.length ?
             res.status(200).send(pokemonName) :
-            res.status(400).send("No se encotro el pokemon")
+            res.status(400).send("No se encontro el pokemon")
         }
         else{
         res.status(200).send(dataPokemon)
@@ -69,5 +69,19 @@ router.post('/pokemons', async (req, res) => {
         res.status(404).send(`Error: ${error}`)
     }
 })
+
+router.get('/delete/:id', async(req, res) => {
+    try{
+        const {id} = req.params
+        const deletePokemon = await Pokemon.destroy({
+            where: {id: id},
+            include: {model: Type}
+           })
+           res.send("borrado con exito")
+
+    }catch(error){
+        res.status(404).send(`Error: ${error.message}`)
+    }
+});
 
 module.exports = router

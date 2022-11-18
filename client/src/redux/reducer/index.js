@@ -111,24 +111,32 @@ function rootReducer(state=initialState, action){
                 }}
                 return false
             })
+
+           if(!types.length){
+                alert("No hay un Pokemon de este tipo aún")
+            }
                          
         return {
             ...state,
-            allPokemons: types     
+            allPokemons: types.length? types : pokemons3     
         }
 
         case "FILTER_BY_CREATED" :
             const pokemons4 = state.pokemons
             const createdFiltered = action.payload === "created"? pokemons4.filter(el => el.createdInDb) : pokemons4
+            if(!createdFiltered.length){
+            alert("No hay Pokemons creados aún")
+            }
         return {
             ...state,
-            allPokemons: createdFiltered
+            allPokemons: createdFiltered.length? createdFiltered : pokemons4
         }
 
         case "DELETE_POKEMON":
+            const pokemons5 = state.pokemons
             return{
                 ...state,
-                allPokemons: state.pokemons.filter(e => e.id !== action.payload)
+                allPokemons: pokemons5.filter(e => e.id !== action.payload)
             }
 
         case "DETAIL_NULL" : 

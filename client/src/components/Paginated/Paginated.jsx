@@ -10,23 +10,21 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated}){
 
 
     return(
-        <div>
-             <nav className="navSearch"> 
-             <ul>          
+        <div className="bt-paginated">
+                     
                     {
+                        
                         pageNumbers && pageNumbers.map(number => {
-                            return(
+                            return(                               
                                 <button 
                                 key={number}
                                 onClick={() => paginated(number)}>
                                 {number}
-                                </button>
+                                </button>                               
                             )
                         })
+                        
                     }
-            </ul>   
-                
-            </nav>
 
         </div>
     )

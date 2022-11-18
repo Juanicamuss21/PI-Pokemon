@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css"
 import * as actions from "../../redux/actions"
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 export default function Nav(){
 
@@ -13,13 +14,42 @@ export default function Nav(){
         dispatch(actions.getAllPokemons())
     }
 
+    const [name, setName] = useState("")
+
+    function handleInputChange(e){
+        e.preventDefault()
+        console.log(name)
+        setName(e.target.value)
+    }
+
+    function handleSubmit(e){  
+        dispatch(actions.getPokemonByName(name))   
+        setName("")
+                
+    }
+
     return (      
         
-        <div className="n-color n-div">
-            <img className="img-pokemon" onClick={(e) => handleClick(e)} src="https://www.pngarts.com/files/3/Pokemon-Logo-PNG-Image.png" alt="img-pokemon"></img>              
+        <div className="n-div">
+            <img className="img-pokemon" onClick={(e) => handleClick(e)} src="https://www.pngarts.com/files/3/Pokemon-Logo-PNG-Image.png" alt="img-pokemon"></img>
+            <div className='s-div'>
+            <input
+             type="text"
+             value={name}
+             placeholder='buscar...'
+             onChange={(e) => handleInputChange(e)}
+             className="s-input"
+            />
+            <button className='s-bt1' type='submit' onClick={(e) => handleSubmit(e)}>Buscar</button>
+            </div>  
+                        
             <div className="div-navLinks">
-                <NavLink to="/Home"><h4 className="n-color n-h4-L">Home</h4></NavLink>
-                <NavLink to='/home/createpokemon'><h4 className="n-color n-h4-R">Create Pokemon</h4></NavLink>
+                <NavLink exact to="/Home" activeClassName="active">
+                    <h4 className="n-color">Home</h4>
+                </NavLink>
+                <NavLink exact to='/home/createpokemon' activeClassName="active">
+                    <h4 className="n-color2">Create Pokemon</h4>
+                </NavLink>
             </div>
        </div>
      

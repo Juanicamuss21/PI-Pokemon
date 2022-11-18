@@ -9,16 +9,17 @@ export default function PokemonCard ({name, image, types, id}){
     const dispatch = useDispatch()
 
     function handleDelete(e){
-        id.length > 3 ? 
-        dispatch(actions.deletePokemon(e.target.name)) : 
-        alert("No se pueden borrar pokemones no creados")
+        e.preventDefault()      
+        dispatch(actions.deletePokemon(e.target.value))       
     }
 
     return (
         <div className="cc-div">
-            <button onClick={(e) => handleDelete(e)} name={id}>x</button>
-         <NavLink to={`/home/pokemons/${id}`}>
-        <h3 className="cc-color cc-h2">{name}</h3>
+            {
+                id.length > 3 ? <button onClick={(e) => handleDelete(e)} value={id}>x</button> : false
+            }
+         <NavLink activeClassName="activeCard" to={`/home/pokemons/${id}`}>
+        <h3 className="cc-color">{name}</h3>
         </NavLink>
         <img src={image} className="cc-img" alt="img not found"/>   
 
@@ -33,7 +34,6 @@ export default function PokemonCard ({name, image, types, id}){
                     )  
                     
                 })
-
              } 
                       
         
