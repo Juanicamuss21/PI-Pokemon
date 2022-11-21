@@ -1,9 +1,10 @@
 .total-div{
     font-family: cursive;
     border-radius: 15px;
-    width: 70%;
+    width: 40%;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.3); 
+    box-shadow: 10px -8px 0px #EF9A53;
 }
 
 .cd-div{
@@ -16,7 +17,8 @@
     color: white;
     height: 600px;
     padding-top: 45px;
-    margin: auto;     
+    margin: auto; 
+    margin-top: 25px;    
 }
 
 .img-card{

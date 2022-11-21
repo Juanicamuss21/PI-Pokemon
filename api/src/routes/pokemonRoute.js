@@ -12,7 +12,7 @@ router.get('/pokemons', async (req, res) => {
             const pokemonName = await dataPokemon.filter(el => el.name.toLowerCase().includes(name.toLowerCase()))
             pokemonName.length ?
             res.status(200).send(pokemonName) :
-            res.status(400).send({message: "No existe"})
+            res.status(400).send({message: "Pokemón no encontrado"})
         }
         else{
         res.status(200).send(dataPokemon)

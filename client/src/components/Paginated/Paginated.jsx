@@ -11,9 +11,9 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated}){
 
     return(
         <div className="bt-paginated">
-                     
-                    {
-                        
+              
+                    {   
+                                                          
                         pageNumbers && pageNumbers.map(number => {
                             return(                               
                                 <button 
@@ -22,7 +22,7 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated}){
                                 {number}
                                 </button>                               
                             )
-                        })
+                        }) 
                         
                     }
 
