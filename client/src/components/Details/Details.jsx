@@ -21,26 +21,26 @@ console.log(props)
     console.log(myPokemon)
     return(
 
-        <div className="cd-div">
+        <div className="total-div">
             
         {
 
             myPokemon.name?
-            <div>
-            <h3>{myPokemon.id}</h3> 
+            <div className="cd-div">
             <h1>{myPokemon.name}</h1>
             <img src={myPokemon.image} className="img-card" alt="img not found"></img>
-            <h2>statistics:</h2>
-            <h3>life: {myPokemon.life}</h3>
-            <h3>attack: {myPokemon.attack}</h3>
-            <h3>defense: {myPokemon.defense}</h3>
-            <h3>speed: {myPokemon.speed}</h3>
-            <h3>height: {myPokemon.height}</h3>
-            <h3>weight: {myPokemon.weight}</h3>
-            <h2>Types: {!myPokemon.createdInDb? myPokemon.types + " " : myPokemon.types.map(el => el.name + " ")}</h2>
+            <h2>Pokemón stats:</h2>
+            <h3>Id: {myPokemon.id}</h3> 
+            <h3>Life: {myPokemon.life}</h3>
+            <h3>Attack: {myPokemon.attack}</h3>
+            <h3>Defense: {myPokemon.defense}</h3>
+            <h3>Speed: {myPokemon.speed}</h3>
+            <h3>Height: {myPokemon.height}</h3>
+            <h3>Weight: {myPokemon.weight}</h3>           
+            <h3>Types: {!myPokemon.createdInDb? myPokemon.types + " " : myPokemon.types.map(el => el.name + " ")}</h3>
             
                            
-            </div> : <p>Loading...</p>      
+            </div> : <p className="p-loading">Loading...</p>      
         
         }
         

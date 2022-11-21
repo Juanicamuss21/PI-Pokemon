@@ -7,12 +7,11 @@ export default function Cards ({currentPokemons}){
     return (
         <div className="Cards-div">
     {
-        currentPokemons.length? currentPokemons.map(el => {
+         currentPokemons.map(el => {
             return (
                 <PokemonCard name={el.name} image={el.image} types={el.types} id={el.id} key={el.id}></PokemonCard>
             )  
-        }) : <p className="div-carga">Cargando Pokemons...</p> 
-             
+        })
     } 
 
         </div>

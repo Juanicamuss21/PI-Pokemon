@@ -113,7 +113,7 @@ function rootReducer(state=initialState, action){
             })
 
            if(!types.length){
-                alert("No hay un Pokemon de este tipo aún")
+                alert("No hay Pokemóns de este tipo aún")
             }
                          
         return {

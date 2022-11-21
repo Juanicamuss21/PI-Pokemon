@@ -56,22 +56,25 @@ export default function Home(){
 
     return(
        <div className="home-sc-p">
-            <div className="row">           
+                      
             <SearchBar 
             handleSort={handleSort}
             handleAttack={handleAttack}
             handleType={handleType}
             handleCreated={handleCreated}
-            ></SearchBar>        
-
-            <Cards currentPokemons={currentPokemons}/>
-            </div>
-         
+            ></SearchBar>{        
+            currentPokemons.length?
+            <div>
+            <Cards currentPokemons={currentPokemons}/>         
+            
             <Paginated
             pokemonPerPage = {pokemonPerPage}
             allPokemons = {allPokemons.length}
             paginated = {paginated}
             ></Paginated>
+    
+            </div> : <p className="div-carga">Loading Pokemóns...</p>}
+
                      
         </div>
     )

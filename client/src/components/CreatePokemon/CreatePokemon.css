@@ -1,17 +1,23 @@
 .input-type{
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;  
     margin-bottom: 10px;
-    margin-left: 570px;
+    border-radius: 10px;
 }
 
 
 .input-type__input{  
     font-family: cursive;
+    width: 200px;
+    margin: auto;
     color: white;
     margin-bottom: 10px;
+   
 }
 
 select{
@@ -29,4 +35,13 @@ select{
 .errors{
     color: red;
     text-shadow: 0px 0px 1px black;
+}
+
+.div-form{
+    background-color: rgba(0,0,0,0.3);
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 7%;
+    box-shadow: 10px 10px 20px #FD841F; 
+    margin: 20px 25%;
 }

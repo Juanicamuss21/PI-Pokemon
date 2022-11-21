@@ -145,6 +145,7 @@ export default function CreatePokemon(){
 
     return(
         <div className="input-type">
+            <div className="div-form">
             <h1>Crea aquí tu Pokemón!</h1>
             <form>
                 <div className="input-type__input">
@@ -253,6 +254,7 @@ export default function CreatePokemon(){
                 <button type="submit" className="bt-create" onClick={(e) => handleSubmit(e)}>Crear Pokemon</button>
                 
             </form>
+            </div>
         </div>
     )
 }

@@ -15,17 +15,18 @@ export default function PokemonCard ({name, image, types, id}){
 
     return (
         <div className="cc-div">
-            {
-                id.length > 3 ? <button onClick={(e) => handleDelete(e)} value={id}>x</button> : false
-            }
-         <NavLink activeClassName="activeCard" to={`/home/pokemons/${id}`}>
-        <h3 className="cc-color">{name}</h3>
-        </NavLink>
-        <img src={image} className="cc-img" alt="img not found"/>   
+        <NavLink className="activeCard" to={`/home/pokemons/${id}`}>
+           
+        <div >
 
-        <h3>Types: </h3>
+            {
+                id.length > 3 ? <button className="bt-delete" onClick={(e) => handleDelete(e)} value={id}>x</button> : false
+            }
         
-        
+        <h3 className="cc-color">{name}</h3>        
+        <img src={image} className="cc-img" alt="img not found"/>   
+        <h3 className="cc-color">Types: </h3>
+             
              {
                 types && types.map(el => {   
                 const type = typeof(el) === "object" ? el.name : el            
@@ -34,10 +35,10 @@ export default function PokemonCard ({name, image, types, id}){
                     )  
                     
                 })
-             } 
-                      
-        
+             }                         
 
+        </div>     
+        </NavLink>
         </div>
     )
 }

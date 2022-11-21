@@ -18,7 +18,8 @@ export function getPokemonByName(name){
             const pokemonName = await axios.get(`http://localhost:3001/pokemons?name=${name}`)
             return dispatch({type: "GET_POKEMON_BY_NAME", payload: pokemonName.data})
         }catch(error){
-            alert("El Pokemón no existe")
+            console.log(error)
+            alert(error.response.data.message)
         }
     }
 }

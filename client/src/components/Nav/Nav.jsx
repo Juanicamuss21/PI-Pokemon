@@ -36,19 +36,19 @@ export default function Nav(){
             <input
              type="text"
              value={name}
-             placeholder='buscar...'
+             placeholder='Search...'
              onChange={(e) => handleInputChange(e)}
              className="s-input"
             />
-            <button className='s-bt1' type='submit' onClick={(e) => handleSubmit(e)}>Buscar</button>
+            <button className='s-bt1' type='submit' onClick={(e) => handleSubmit(e)}>Search</button>
             </div>  
                         
             <div className="div-navLinks">
-                <NavLink exact to="/Home" activeClassName="active">
-                    <h4 className="n-color">Home</h4>
+                <NavLink exact to="/Home" className="no-active" activeClassName="active">
+                    <h4>Home</h4>
                 </NavLink>
-                <NavLink exact to='/home/createpokemon' activeClassName="active">
-                    <h4 className="n-color2">Create Pokemon</h4>
+                <NavLink exact to='/home/createpokemon' className="no-active" activeClassName="active">
+                    <h4>Create Pokemon</h4>
                 </NavLink>
             </div>
        </div>

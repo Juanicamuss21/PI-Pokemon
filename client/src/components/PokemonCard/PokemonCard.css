@@ -1,6 +1,23 @@
 .cc-div{
     margin: auto;
-    font-family: cursive; 
+    font-family: cursive;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    height: 400px;
+    width: 200px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    justify-content: end;
+}
+
+.cc-div:hover{
+    outline: 2px solid wheat;
+}
+
+.activeCard{
+    text-decoration: none;
 }
 
 .cc-img{
@@ -9,5 +26,11 @@
 }
 
 .cc-color{
-    color: black;
+    color: wheat;
+}
+
+.bt-delete{
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
