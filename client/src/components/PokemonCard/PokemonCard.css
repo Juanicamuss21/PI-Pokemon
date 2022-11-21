@@ -1,5 +1,4 @@
 .cc-div{
-    margin: auto;
     font-family: cursive;
     padding-left: 10px;
     padding-right: 10px;
@@ -9,7 +8,7 @@
     background-color: rgba(0,0,0,0.3);
     border-radius: 10px;
     margin-bottom: 5px;
-    justify-content: end;
+    margin-left: 3px;
 }
 
 .cc-div:hover{

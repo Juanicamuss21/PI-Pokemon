@@ -4,7 +4,8 @@
     width: 40%;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.3); 
-    box-shadow: 10px -8px 0px #EF9A53;
+    /* box-shadow: 10px -8px 0px #EF9A53; */
+    box-shadow: 10px -8px 2px #FD841F;
 }
 
 .cd-div{
