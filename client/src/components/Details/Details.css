@@ -3,9 +3,9 @@
     border-radius: 15px;
     width: 40%;
     margin: auto;
+    margin-bottom: 35px;
     background-color: rgba(0, 0, 0, 0.3); 
-    /* box-shadow: 10px -8px 0px #EF9A53; */
-    box-shadow: 10px -8px 2px #FD841F;
+    box-shadow: 10px 10px 10px #FFE15D; 
 }
 
 .cd-div{

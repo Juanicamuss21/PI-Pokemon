@@ -145,16 +145,17 @@ export default function CreatePokemon(){
 
     return(
         <div className="input-type">
-            <div className="div-form">
+            
             <h1>Crea aquí tu Pokemón!</h1>
             <form>
                 <div className="input-type__input">
-                    <label>Name: </label>
+                    <label>Name:</label>
                     <input
                     type="text"
                     value={input.name}
                     name="name"
                     onChange={(e) => handleChange(e)}
+                    className="input-form"
                     />
                     {error.name && (<p className="errors">{error.name}</p>)}        
                 </div>
@@ -165,6 +166,7 @@ export default function CreatePokemon(){
                     value={input.life}
                     name="life"
                     onChange={(e) => handleChange(e)}
+                    className="input-form"
                     />
                     {error.life && (<p className="errors">{error.life}</p>)}
                 </div>
@@ -175,6 +177,7 @@ export default function CreatePokemon(){
                     value={input.attack}
                     name="attack"
                     onChange={(e) => handleChange(e)}
+                    className="input-form"
                     />   
                     {error.attack && (<p className="errors">{error.attack}</p>)}              
                 </div>
@@ -255,6 +258,5 @@ export default function CreatePokemon(){
                 
             </form>
             </div>
-        </div>
     )
 }
