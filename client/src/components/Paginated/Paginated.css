@@ -10,5 +10,10 @@ button{
     color: wheat;
     border-radius: 7px;
     outline: 2px solid wheat;
-    margin: 7px;
+    margin: 10px;
+}
+
+button:focus{
+    background-color: wheat;
+    color: black;
 }

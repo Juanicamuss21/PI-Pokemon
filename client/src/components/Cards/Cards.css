@@ -4,13 +4,6 @@
     flex-wrap: wrap;
     margin-bottom: 30px;
     margin-left: 4px;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
-.div-carga{
-    font-size: 20px;
-    color: white;
-    height: 600px;
-    padding-top: 45px;
-    margin: auto;
-}

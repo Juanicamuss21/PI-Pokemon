@@ -23,6 +23,20 @@ export default function Home(){
         SetCurrentPage(pageNumber)
     }
 
+    const previus = () => {
+        if(currentPage === 1){
+           return SetCurrentPage(9)
+        }
+        SetCurrentPage(currentPage - 1)
+    }
+
+    const next = () => {
+        if(currentPage === 9){
+           return SetCurrentPage(1)
+        }
+        SetCurrentPage(currentPage + 1)
+    }
+
     useEffect(() => {
         dispatch(actions.getAllPokemons())
     },[dispatch])
@@ -71,6 +85,8 @@ export default function Home(){
             pokemonPerPage = {pokemonPerPage}
             allPokemons = {allPokemons.length}
             paginated = {paginated}
+            previus = {previus}
+            next = {next}
             ></Paginated>
     
             </div> : <p className="div-carga">Loading Pokemóns...</p>}

@@ -5,12 +5,11 @@
     margin: auto;
     margin-bottom: 35px;
     background-color: rgba(0, 0, 0, 0.3); 
-    box-shadow: 10px 10px 10px #FFE15D; 
+    box-shadow: 10px 10px 10px #FFE15D;  
 }
 
 .cd-div{
     color: wheat;
-
 }
 
 .p-loading{

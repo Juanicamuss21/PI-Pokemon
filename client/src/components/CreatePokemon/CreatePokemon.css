@@ -14,7 +14,7 @@
     border-radius: 7%;
     box-shadow: 10px 10px 0px #fe311e;  
     /* box-shadow: 10px 10px 0px #FD841F; */
-    margin: 22px 25%;
+    margin: 52px 25%;
 }
 
 .input-type__input{  
@@ -65,11 +65,11 @@ select{
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
+  appearance: none;
   -webkit-appearance: none; 
   margin: 0; 
 }
 
-input[type=number] { -moz-appearance:textfield; } 
 
 
 

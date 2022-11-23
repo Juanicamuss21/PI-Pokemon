@@ -4,6 +4,7 @@ import "./Nav.css"
 import * as actions from "../../redux/actions"
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import {FaSearch} from "react-icons/fa";
 
 export default function Nav(){
 
@@ -40,7 +41,7 @@ export default function Nav(){
              onChange={(e) => handleInputChange(e)}
              className="s-input"
             />
-            <button className='s-bt1' type='submit' onClick={(e) => handleSubmit(e)}>Search</button>
+            <button className='s-bt1' type='submit' onClick={(e) => handleSubmit(e)}><FaSearch/></button>
             </div>  
                         
             <div className="div-navLinks">

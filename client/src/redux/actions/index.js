@@ -1,14 +1,26 @@
 import axios from 'axios'
 
-export function getAllPokemons(){
-    return async function(dispatch){
-        try{
-            const pokemons = await axios.get("http://localhost:3001/pokemons")
+// export function getAllPokemons(){
+//     return async function(dispatch){
+//         try{
+//             const pokemons = await axios.get("http://localhost:3001/pokemons")
 
-            return dispatch({type: "GET_ALL_POKEMONS", payload: pokemons.data})
-        }catch(error){
-            console.log(error.message)
-        }
+//             return dispatch({type: "GET_ALL_POKEMONS", payload: pokemons.data})
+//         }catch(error){
+//             console.log(error.message)
+//         }
+//     }
+// } 
+
+export function getAllPokemons(){
+    return function(dispatch){
+        axios.get("http://localhost:3001/pokemons")
+        .then((res) => res.data)
+        .then((res) => {
+            return dispatch({type: "GET_ALL_POKEMONS", payload: res})
+        })
+        .catch(error => console.log(error.message))
+                     
     }
 } 
 

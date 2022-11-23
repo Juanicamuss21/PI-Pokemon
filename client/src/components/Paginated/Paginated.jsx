@@ -1,6 +1,9 @@
 import React from "react";
 import './Paginated.css'
-export default function Paginated({pokemonPerPage, allPokemons, paginated}){
+import {GrFormNext, GrFormPrevious} from "react-icons/gr";
+
+
+export default function Paginated({pokemonPerPage, allPokemons, paginated, previus, next}){
 
     const pageNumbers = []
 
@@ -11,11 +14,13 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated}){
 
     return(
         <div className="bt-paginated">
-              
+
+            <button onClick={() => previus()}><GrFormPrevious/>previus</button>
+
                     {   
                                                           
                         pageNumbers && pageNumbers.map(number => {
-                            return(                               
+                            return(                                                              
                                 <button 
                                 key={number}
                                 onClick={() => paginated(number)}>
@@ -25,6 +30,8 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated}){
                         }) 
                         
                     }
+
+            <button onClick={() => next()}>next<GrFormNext/></button>
 
         </div>
     )
