@@ -102,10 +102,13 @@ export default function CreatePokemon(){
     }
 
     function handleSelect(e){
-        setInput({
-            ...input,
-            types: [...input.types,e.target.value]
-        })
+        if(!input.types.includes(e.target.value)){
+            return setInput({
+                ...input,
+                types: [...input.types,e.target.value]
+            })
+        }
+        alert("Este tipo ya fué incluido")
         console.log(input)
     }
 

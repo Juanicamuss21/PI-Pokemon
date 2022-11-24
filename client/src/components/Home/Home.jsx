@@ -23,16 +23,17 @@ export default function Home(){
         SetCurrentPage(pageNumber)
     }
 
-    const previus = () => {
-        if(currentPage === 1){
-           return SetCurrentPage(9)
+    const previus = (pageNumbers) => {
+        console.log(pageNumbers.length)
+        if(currentPage === pageNumbers.length - pageNumbers.length + 1){
+           return SetCurrentPage(pageNumbers.length)
         }
         SetCurrentPage(currentPage - 1)
     }
 
-    const next = () => {
-        if(currentPage === 9){
-           return SetCurrentPage(1)
+    const next = (pageNumbers) => {      
+        if(currentPage === pageNumbers.length){
+           return SetCurrentPage(pageNumbers.length - pageNumbers.length + 1)
         }
         SetCurrentPage(currentPage + 1)
     }

@@ -11,11 +11,13 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated, previ
         pageNumbers.push(i+1)
     }
 
+    console.log(pageNumbers.length)
+
 
     return(
         <div className="bt-paginated">
 
-            <button onClick={() => previus()}><GrFormPrevious/>previus</button>
+            <button onClick={() => previus(pageNumbers)}><GrFormPrevious/>previus</button>
 
                     {   
                                                           
@@ -31,7 +33,7 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated, previ
                         
                     }
 
-            <button onClick={() => next()}>next<GrFormNext/></button>
+            <button onClick={() => next(pageNumbers)}>next<GrFormNext/></button>
 
         </div>
     )
