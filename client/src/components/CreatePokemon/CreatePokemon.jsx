@@ -7,6 +7,9 @@ import "./CreatePokemon.css"
 
 function validateInput(input) {
     const errors = {};
+    if(input.name.length > 20){
+        errors.name = "No debe exceder los 20 caracteres"
+    }
     if ((!input.name && input.life) || (!input.name && input.attack) || (!input.name && input.defense) || (!input.name && input.speed) || (!input.name && input.height) || (!input.name && input.weight) || (!input.name && input.image)) {
         errors.name = "Se requiere un nombre";
     }
@@ -135,7 +138,6 @@ export default function CreatePokemon(){
             image: "",
             types: []
         })
-        alert("Pokemon creado")
         // history.push('/home')
     }
 

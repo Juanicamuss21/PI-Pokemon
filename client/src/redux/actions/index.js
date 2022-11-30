@@ -62,11 +62,11 @@ export function getAllTypes(){
 export function postPokemons(post){
     return async function(dispatch){
         try{
-            const response = await axios.post("http://localhost:3001/pokemons", post)
-
-            return dispatch({type: "POST_POKEMON", payload: response.data})
+            const response = await axios.post("http://localhost:3001/pokemons", post)         
+            alert("Pokemon creado")
+            return dispatch({type: "POST_POKEMON", payload: response.data})         
         }catch(error){
-            console.log(error.message)
+            alert("Error al crear el Pokemón")
         }
     }
 }

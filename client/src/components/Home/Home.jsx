@@ -19,12 +19,12 @@ export default function Home(){
 
     const [render, setRender] = useState("")
 
+
     const paginated = (pageNumber) => {
         SetCurrentPage(pageNumber)
     }
 
     const previus = (pageNumbers) => {
-        console.log(pageNumbers.length)
         if(currentPage === pageNumbers.length - pageNumbers.length + 1){
            return SetCurrentPage(pageNumbers.length)
         }
@@ -60,11 +60,13 @@ export default function Home(){
 
     function handleType(e){
         e.preventDefault()
+        SetCurrentPage(1)
         dispatch(actions.filterByType(e.target.value))
         setRender(e.target.value)
     }
     
     function handleCreated(e){
+        SetCurrentPage(1)
         dispatch(actions.filterByCreated(e.target.value))
         setRender(e.target.value)
     }

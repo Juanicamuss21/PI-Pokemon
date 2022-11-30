@@ -66,7 +66,7 @@ router.post('/pokemons', async (req, res) => {
         res.status(200).send(newPokemon)
 
     }catch(error){
-        res.status(404).send(`Error: ${error}`)
+        res.status(404).send(`Error: ${error.message}`)
     }
 })
 

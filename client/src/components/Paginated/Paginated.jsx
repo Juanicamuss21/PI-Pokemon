@@ -11,9 +11,6 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated, previ
         pageNumbers.push(i+1)
     }
 
-    console.log(pageNumbers.length)
-
-
     return(
         <div className="bt-paginated">
 
