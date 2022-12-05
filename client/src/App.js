@@ -5,6 +5,8 @@ import Home from './components/Home/Home';
 import Details from './components/Details/Details';
 import CreatePokemon from './components/CreatePokemon/CreatePokemon'
 import Nav from './components/Nav/Nav'
+import axios from 'axios';
+axios.defaults.baseURL = "http://localhost:3001"
 
 function App() {
   return (

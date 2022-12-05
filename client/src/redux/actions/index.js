@@ -14,7 +14,7 @@ import axios from 'axios'
 
 export function getAllPokemons(){
     return function(dispatch){
-        axios.get("http://localhost:3001/pokemons")
+        axios.get("/pokemons")
         .then((res) => res.data)
         .then((res) => {
             return dispatch({type: "GET_ALL_POKEMONS", payload: res})
@@ -27,7 +27,7 @@ export function getAllPokemons(){
 export function getPokemonByName(name){
     return async function(dispatch){
         try{
-            const pokemonName = await axios.get(`http://localhost:3001/pokemons?name=${name}`)
+            const pokemonName = await axios.get(`/pokemons?name=${name}`)
             return dispatch({type: "GET_POKEMON_BY_NAME", payload: pokemonName.data})
         }catch(error){
             console.log(error)
@@ -39,7 +39,7 @@ export function getPokemonByName(name){
 export function getDetails(id){
     return async function(dispatch){
         try{
-            const details = await axios.get(`http://localhost:3001/pokemons/${id}`)
+            const details = await axios.get(`/pokemons/${id}`)
             return dispatch({type: "GET_DETAILS", payload: details.data})
         }catch(error){
             console.log(error.message)
@@ -50,7 +50,7 @@ export function getDetails(id){
 export function getAllTypes(){
     return async function(dispatch){
         try{
-            const types = await axios.get("http://localhost:3001/types")
+            const types = await axios.get("/types")
 
             return dispatch({type: "GET_ALL_TYPES", payload: types.data})
         }catch(error){
@@ -62,7 +62,7 @@ export function getAllTypes(){
 export function postPokemons(post){
     return async function(dispatch){
         try{
-            const response = await axios.post("http://localhost:3001/pokemons", post)         
+            const response = await axios.post("/pokemons", post)         
             alert("Pokemon creado")
             return dispatch({type: "POST_POKEMON", payload: response.data})         
         }catch(error){
@@ -103,7 +103,7 @@ export function filterByCreated(value){
 export function deletePokemon(id){
     return async function(dispatch){
         try{
-            await axios.get(`http://localhost:3001/delete/${id}`)
+            await axios.get(`/delete/${id}`)
             return dispatch({type: "DELETE_POKEMON", payload: id})
         }catch(error){
             console.log(error.message)
