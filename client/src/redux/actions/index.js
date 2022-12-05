@@ -14,7 +14,7 @@ import axios from 'axios'
 
 export function getAllPokemons(){
     return function(dispatch){
-        axios.get("/pokemons")
+        axios.get("http://localhost:3001/pokemons")
         .then((res) => res.data)
         .then((res) => {
             return dispatch({type: "GET_ALL_POKEMONS", payload: res})
@@ -27,7 +27,7 @@ export function getAllPokemons(){
 export function getPokemonByName(name){
     return async function(dispatch){
         try{
-            const pokemonName = await axios.get(`/pokemons?name=${name}`)
+            const pokemonName = await axios.get(`http://localhost:3001/pokemons?name=${name}`)
             return dispatch({type: "GET_POKEMON_BY_NAME", payload: pokemonName.data})
         }catch(error){
             console.log(error)
