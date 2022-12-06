@@ -14,6 +14,7 @@ import axios from 'axios'
 
 export function getAllPokemons(){
     return function(dispatch){
+        console.log(axios)
         axios.get("/pokemons")
         .then((res) => res.data)
         .then((res) => {
