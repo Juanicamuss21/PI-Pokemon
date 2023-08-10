@@ -6,14 +6,37 @@
 
 button{
     cursor: pointer;
-    background-color: black;
-    color: wheat;
+    background-color: transparent;
+    color: cornflowerblue;
     border-radius: 7px;
-    outline: 2px solid wheat;
+    border: none;
+    /* outline: 2px solid wheat; */
     margin: 10px;
+    font-size: 1rem;
+    padding: 10px;
 }
 
 button:focus{
-    background-color: wheat;
+    background-color: #777;
     color: black;
+}
+
+.button-icon{
+    background-color: transparent;
+    outline: none;
+}
+
+.button-icon:focus{
+    background-color: transparent;
+}
+
+.icon-next{
+    /* outline: 3px solid wheat; */
+    font-size: 1rem;
+}
+
+.icon-previous{
+    color: wheat;
+    font-size: 1rem;
+
 }

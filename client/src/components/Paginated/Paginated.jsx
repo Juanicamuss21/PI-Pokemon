@@ -1,7 +1,7 @@
 import React from "react";
 import './Paginated.css'
-import {GrFormNext, GrFormPrevious} from "react-icons/gr";
-
+// import {GrFormNext, GrFormPrevious} from "react-icons/gr";
+import {FcNext, FcPrevious} from "react-icons/fc"
 
 export default function Paginated({pokemonPerPage, allPokemons, paginated, previus, next}){
 
@@ -14,7 +14,7 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated, previ
     return(
         <div className="bt-paginated">
 
-            <button onClick={() => previus(pageNumbers)}><GrFormPrevious/>previus</button>
+            <button className="button-icon" onClick={() => previus(pageNumbers)}><FcPrevious className="icon-previous"/></button>
 
                     {   
                                                           
@@ -30,7 +30,7 @@ export default function Paginated({pokemonPerPage, allPokemons, paginated, previ
                         
                     }
 
-            <button onClick={() => next(pageNumbers)}>next<GrFormNext/></button>
+            <button className="button-icon" onClick={() => next(pageNumbers)}><FcNext className="icon-next"/></button>
 
         </div>
     )

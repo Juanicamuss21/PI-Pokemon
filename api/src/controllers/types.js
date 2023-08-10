@@ -1,5 +1,5 @@
 const axios = require('axios')
-const {Pokemon, Type} = require('../db')
+const { Type } = require('../db')
 
 const getInfoApiType = async () => {
     const apiTypes = await axios.get("https://pokeapi.co/api/v2/type")
@@ -13,8 +13,8 @@ const getInfoApiType = async () => {
           })
       });
 
-      const allTypes = await Type.findAll();
-        return allTypes;
+    const allTypes = await Type.findAll();
+    return allTypes;
 
 }  
 

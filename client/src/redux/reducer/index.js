@@ -137,7 +137,7 @@ function rootReducer(state=initialState, action){
             return{
                 ...state,
                 allPokemons: pokemons5.filter(e => e.id !== action.payload)
-            }
+        }
 
         case "DETAIL_NULL" : 
         return {

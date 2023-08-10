@@ -6,8 +6,9 @@ import Details from './components/Details/Details';
 import CreatePokemon from './components/CreatePokemon/CreatePokemon'
 import Nav from './components/Nav/Nav'
 import axios from 'axios';
-axios.defaults.baseURL = "https://pi-pokemon-production-5096.up.railway.app"
-console.log(axios.defaults.baseURL)
+axios.defaults.baseURL = 'http://localhost:3001/';
+// axios.defaults.baseURL = "https://pi-pokemon-production-5096.up.railway.app"
+
 function App() {
   return (
     <div className="App">      
